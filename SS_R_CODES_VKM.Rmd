@@ -1,0 +1,198 @@
+************************sample size calculation********************
+library(pwr)
+
+pwr.p.test: one-sample proportion test
+pwr.2p.test: two-sample proportion test
+pwr.2p2n.test: two-sample proportion test (unequal sample sizes)
+pwr.t.test: two-sample, one-sample and paired t-tests
+pwr.t2n.test: two-sample t-tests (unequal sample sizes)
+
+
+**Q.1**
+delta<-10
+
+sigma<-25
+
+d<-delta/sigma
+
+pwr.t.test(d=d,sig.level=0.05, power=0.90)
+
+p.out<-pwr.t.test(d=d,sig.level=0.05, power=0.90)
+
+plot(p.out)
+
+attrition_rate<-0.30
+retention_rate<-(1-attrition_rate)
+retention_rate
+
+N<- (2*133/0.7)
+N
+
+
+**alternative method***
+power.t.test(delta = 10, sd = 25, sig.level = 0.05, power = 0.90)
+
+attrition_rate<-0.30
+retention_rate<-(1-attrition_rate)
+retention_rate
+
+N<- (2*133/0.7)
+N
+
+**Q.2**
+
+pwr.2p.test(h=ES.h(p1=0.60, p2=0.20), sig.level=0.05, power=0.95)
+
+**alternative method***
+power.prop.test(p1=0.60, p2=0.20, sig.level=0.05, power=0.95)
+
+
+**Q.3**
+
+pwr.2p.test(h=ES.h(p1=0.40, p2=0.10), sig.level=0.02, power=0.90)
+
+**alternative method***
+power.prop.test(p1=0.40, p2=0.10, sig.level=0.02, power=0.90)
+
+
+**Q.4**
+
+pwr.2p.test(h=ES.h(p1=0.45, p2=0.10), sig.level=0.05, power=0.80)
+
+**alternative method***
+power.prop.test(p1=0.45, p2=0.10, sig.level=0.05, power=0.80)
+
+
+**Q.5**
+
+delta<-11
+
+sigma<-12
+
+d<-delta/sigma
+
+pwr.t.test(n=120, d=d, sig.level=0.05)
+
+p.out<-pwr.t.test(n=120,d=d,sig.level=0.05)
+
+plot(p.out)
+
+
+**alternative method***
+power.t.test(n=120, delta = 11, sd = 12, sig.level = 0.05)
+
+
+**Q.6**
+delta<-10
+
+sigma<-20
+
+d<-delta/sigma
+
+pwr.t.test(d=d,sig.level=0.05, power=0.80)
+
+p.out<-pwr.t.test(d=d,sig.level=0.05, power=0.80)
+
+plot(p.out)
+
+**alternative method***
+power.t.test(delta = 10, sd = 20, sig.level = 0.05, power = 0.80)
+
+
+
+**Q.7**
+
+delta<-32
+
+sigma<-38
+
+d<-delta/sigma
+
+pwr.t.test(n=155, d=d, sig.level=0.05)
+
+p.out<-pwr.t.test(n=155,d=d,sig.level=0.05)
+
+plot(p.out)
+
+**alternative method***
+power.t.test(n=155, delta = 32, sd = 38, sig.level = 0.05)
+
+
+**Q.8**
+
+delta<-10
+
+sigma<-15
+
+d<-delta/sigma
+
+pwr.t.test(n=24, d=d, sig.level=0.05)
+
+p.out<-pwr.t.test(n=24, d=d, sig.level=0.05)
+
+plot(p.out)
+
+**alternative method***
+power.t.test(n=24, delta = 10, sd =15, sig.level = 0.05)
+
+
+**Q.9**
+
+pwr.2p.test(h=ES.h(p1=0.35, p2=0.10), sig.level=0.02, power=0.80)
+
+**alternative method***
+power.prop.test(p1=0.35, p2=0.10, sig.level=0.02, power=0.80)
+
+
+**Q.10**
+
+delta<-14
+
+sigma<-19
+
+d<-delta/sigma
+
+pwr.t.test(n=54, d=d, sig.level=0.02)
+
+p.out<-pwr.t.test(n=54, d=d, sig.level=0.02)
+
+plot(p.out)
+
+**alternative method***
+power.t.test(n=54, delta=14, sd =19, sig.level = 0.02)
+
+
+**Q.11**
+
+no_w<-34
+t<-150
+attrition_rate<-no_w*100/t
+attrition_rate
+
+retention_rate<-(1-attrition_rate)
+
+**Q.12**
+
+summary(twstrs)
+sd(twstrs)
+
+
+install.packages("plm")
+
+install.packages("ggplot2")
+
+
+getwd()
+
+setwd ("C:/Users/vijay.mishra/Desktop/MATCOBIND_FS_PHFI_FINAL_MAT_FEB_20")
+
+
+library(foreign)
+
+t<-read.dta("Oral_Health_Ado_exp.dta")
+ 
+read.dta("Oral_Health_Ado_exp.dta")
+ 
+library(haven)
+Oral_Health_Ado_exp <- read_dta("Oral_Health_Ado_exp.dta")
+View(Oral_Health_Ado_exp)
